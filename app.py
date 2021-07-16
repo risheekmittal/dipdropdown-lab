@@ -53,7 +53,7 @@ st.write('You selected:', option)
 import cv2
 from  PIL import Image, ImageOps
 def import_and_predict():
-  if option == Logical XOR:
+  if option == "Logical XOR":
   	result = cv2.bitwise_xor(img2, img1)
   else:
 	result = cv2.bitwise_and(img1,img2)
