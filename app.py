@@ -4,6 +4,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import cv2
 #import tensorflow as tf
 #from keras.preprocessing import image
 from werkzeug.utils import secure_filename
@@ -50,7 +51,6 @@ option = st.selectbox('Choose Appropriate option',('Logical XOR', 'Logical AND')
 st.write('You selected:', option)
 
 
-import cv2
 from  PIL import Image, ImageOps
 def import_and_predict():
   if option == "Logical XOR":
