@@ -54,12 +54,12 @@ st.write('You selected:', option)
 
 from  PIL import Image, ImageOps
 def import_and_predict():
-  img1 = cv2.resize(img1,(300,300), interpolation = cv2.INTER_AREA)
-  img2 = cv2.resize(img2,(300,300), interpolation = cv2.INTER_AREA) 
+  imga = cv2.resize(img1,(300,300), interpolation = cv2.INTER_AREA)
+  imgb = cv2.resize(img2,(300,300), interpolation = cv2.INTER_AREA) 
   if option == "Logical XOR":
-     result = cv2.bitwise_xor(img1,img2)
+     result = cv2.bitwise_xor(imga,imgb)
   else:
-     result = cv2.bitwise_and(img1,img2)
+     result = cv2.bitwise_and(imga,imgb)
   file_bytes = np.asarray(bytearray(result.read()), dtype=np.uint8)
   opencv_image = cv2.imdecode(file_bytes, 1)
   st.image(opencv_image, channels="BGR")
