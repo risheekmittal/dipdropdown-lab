@@ -28,8 +28,8 @@ st.title("""
          )
 
 
-img1= st.file_uploader("Please upload image", type=("jpg", "png"))
-img2= st.file_uploader("Please upload image", type=("jpg", "png"))
+img1= st.file_uploader("Please upload image 1", type=("jpg", "png"))
+img2= st.file_uploader("Please upload image 2", type=("jpg", "png"))
 
 if img1 is None:
   st.text("Please upload an Image 1")
