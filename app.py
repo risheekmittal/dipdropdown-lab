@@ -64,9 +64,7 @@ def import_and_predict():
      result = cv2.bitwise_xor(imga,imgb)
   else:
      result = cv2.bitwise_and(imga,imgb)
-  file_bytes = np.asarray(bytearray(result.read()), dtype=np.uint8)
-  opencv_image = cv2.imdecode(file_bytes, 1)
-  st.image(opencv_image, channels="BGR")
+  st.image(result,  use_column_width=True)
   return 0 
     
 if st.button("Click To Perform Operation"):
