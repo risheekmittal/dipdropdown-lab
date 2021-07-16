@@ -53,10 +53,10 @@ st.write('You selected:', option)
 import cv2
 from  PIL import Image, ImageOps
 def import_and_predict():
-  if option == "Logical XOR":
-  	result = cv2.bitwise_xor(img2, img1)
+  if option == Logical XOR:
+     result = cv2.bitwise_xor(img2, img1)
   else:
-	result = cv2.bitwise_and(img1,img2)
+     result = cv2.bitwise_and(img1,img2)
   file_bytes = np.asarray(bytearray(result.read()), dtype=np.uint8)
   image = cv2.imdecode(file_bytes, 1)
   st.image(result,caption='Result', use_column_width=True)  
@@ -73,7 +73,7 @@ html_temp = """
    <div class="" style="background-color:white;" >
    <div class="clearfix">           
    <div class="col-md-12">
-   <center><p style="font-size:20px;color:black;margin-top:10px;">Digital Image processing EndTerm </p></center> 
+   <center><p style="font-size:20px;color:black;margin-top:10px;">Digital Image processing EndTerm Lab</p></center> 
    </div>
    </div>
    </div>
