@@ -54,8 +54,8 @@ st.write('You selected:', option)
 
 from  PIL import Image, ImageOps
 def import_and_predict():
-  imga = cv2.resize(img1,(300,300))
-  imgb = cv2.resize(img2,(300,300)) 
+  imga = np.asarray(cv2.resize(img1,(300,300)))
+  imgb = np.asarray(cv2.resize(img2,(300,300)))
   if option == "Logical XOR":
      result = cv2.bitwise_xor(imga,imgb)
   else:
@@ -63,10 +63,10 @@ def import_and_predict():
   file_bytes = np.asarray(bytearray(result.read()), dtype=np.uint8)
   opencv_image = cv2.imdecode(file_bytes, 1)
   st.image(opencv_image, channels="BGR")
-  return 
+  return 0 
     
 if st.button("Click To Perform Operation"):
-  import_and_predict()
+  result=import_and_predict()
   
 if st.button("About"):
   st.header("Dikshant Mali")
