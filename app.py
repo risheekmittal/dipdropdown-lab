@@ -31,6 +31,7 @@ st.title("""
 
 img1= st.file_uploader("Please upload image 1", type=("jpg", "png"))
 img2= st.file_uploader("Please upload image 2", type=("jpg", "png"))
+option = st.selectbox('Choose Appropriate option',('Logical XOR', 'Logical AND'))
 
 if img1 is None:
   st.text("Please upload an Image 1")
@@ -46,7 +47,7 @@ else:
   image = cv2.imdecode(file_bytes, 1)
   st.image(img2,caption='Uploaded Image 2', use_column_width=True)
 
-option = st.selectbox('Choose Appropriate option',('Logical XOR', 'Logical AND'))
+
 
 st.write('You selected:', option)
 
@@ -54,13 +55,12 @@ st.write('You selected:', option)
 from  PIL import Image, ImageOps
 def import_and_predict():
   if option == "Logical XOR":
-     result = cv2.bitwise_xor(img2, img1)
+     result = cv2.bitwise_xor(img1,img2)
   else:
      result = cv2.bitwise_and(img1,img2)
   file_bytes = np.asarray(bytearray(result.read()), dtype=np.uint8)
-  image = cv2.imdecode(file_bytes, 1)
-  st.image(result,caption='Result', use_column_width=True)  
-  
+  opencv_image = cv2.imdecode(file_bytes, 1)
+  st.image(opencv_image, channels="BGR")
   return 0
     
 if st.button("Click To Perform Operation"):
