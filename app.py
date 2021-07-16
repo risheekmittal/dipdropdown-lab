@@ -73,7 +73,7 @@ html_temp = """
    <div class="" style="background-color:white;" >
    <div class="clearfix">           
    <div class="col-md-12">
-   <center><p style="font-size:20px;color:black;margin-top:10px;">Digital Image processing EndTerm Lab</p></center> 
+   <center><p style="font-size:20px;color:black;margin-top:10px;">Digital Image processing EndTerm </p></center> 
    </div>
    </div>
    </div>
