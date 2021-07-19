@@ -15,7 +15,7 @@ html_temp = """
    <div class="" style="background-color:salmon;" >
    <div class="clearfix">           
    <div class="col-md-12">
-   <center><p style="font-size:40px;color:white;margin-top:10px;">Dikshant Mali - PIET18CS049</p></center> 
+   <center><p style="font-size:40px;color:white;margin-top:10px;"></p></center> 
    <center><p style="font-size:30px;color:white;margin-top:10px;">Digital Image Processing End-Term Examination</p></center> 
    </div>
    </div>
@@ -71,7 +71,7 @@ if st.button("Click To Perform Operation"):
   result=import_and_predict()
   
 if st.button("About"):
-  st.header("Dikshant Mali")
+  st.header("Diks")
   st.subheader("Student, Department of Computer Engineering, PIET")
 html_temp = """
    <div class="" style="background-color:white;" >
